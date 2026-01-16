@@ -13,29 +13,42 @@
   <p class="subtitle">33 Oriente #10, Puebla, Pue.</p>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img
-    src="Imagenes/imagen_2025-12-07_200507713.png"
-    alt="Fachada principal"
-    onerror="this.src='https://placehold.co/1600x900/e9ecef/6c757d/png?text=Imagen+no+disponible';">
+<!-- HERO (carousel alto, no horizontal "aplanado") -->
+<section class="hero" aria-label="Hero carousel">
+  <div class="hero-slides">
+    <div class="hero-slide">
+      <img src="Imagenes/imagen_2025-12-07_200507713.png" alt="Fachada 1"
+           onerror="this.src='https://placehold.co/1600x900/e9ecef/6c757d/png?text=Imagen+no+disponible';">
+    </div>
+    <div class="hero-slide">
+      <img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor (hero)"
+           onerror="this.src='https://placehold.co/1600x900/e9ecef/6c757d/png?text=Imagen+no+disponible';">
+    </div>
+    <div class="hero-slide">
+      <img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor 2"
+           onerror="this.src='https://placehold.co/1600x900/e9ecef/6c757d/png?text=Imagen+no+disponible';">
+    </div>
+  </div>
+
   <div class="hero-overlay">
-    <div class="hero-text">
+    <div class="hero-centered">
       <h2>ÚLTIMA OPORTUNIDAD</h2>
       <p class="hero-sub">Últimos 3 departamentos disponibles</p>
       <div class="price-pill">Desde $2,940,000.00</div>
     </div>
   </div>
+
+  <button class="hero-arrow hero-prev" aria-label="Anterior hero">‹</button>
+  <button class="hero-arrow hero-next" aria-label="Siguiente hero">›</button>
+  <div class="hero-dots" aria-hidden="false"></div>
 </section>
 
 <!-- UBICACIÓN -->
 <section class="section">
   <h2>Ubicación</h2>
   <div class="card map-card">
-    <img
-      src="Imagenes/imagen_2025-12-07_202017772.png"
-      alt="Mapa ubicación"
-      onerror="this.src='https://placehold.co/700x700/e9ecef/6c757d/png?text=Mapa';">
+    <img src="Imagenes/imagen_2025-12-07_202017772.png" alt="Mapa ubicación"
+         onerror="this.src='https://placehold.co/700x700/e9ecef/6c757d/png?text=Mapa';">
     <div class="map-caption">
       <p>33 Oriente #10, Puebla, Pue.</p>
       <a class="btn blue" href="https://www.google.com/maps/search/?api=1&query=33+Oriente+10+Puebla+Pue" target="_blank">📍 Ver en Google Maps</a>
@@ -43,12 +56,17 @@
   </div>
 </section>
 
-<!-- MODELOS -->
+<!-- MODELOS con selector A / B -->
 <section class="section">
   <h2>Modelos</h2>
 
-  <div class="models">
-    <article class="model-card">
+  <div class="model-toggle">
+    <button class="toggle-btn active" data-target="modelA">Torre A</button>
+    <button class="toggle-btn" data-target="modelB">Torre B</button>
+  </div>
+
+  <div class="models" id="models-wrapper">
+    <article id="modelA" class="model-card active-model">
       <div class="model-text">
         <h3>Torre A</h3>
         <ul>
@@ -60,13 +78,12 @@
         </ul>
       </div>
       <div class="model-image">
-        <img src="Imagenes/imagen_2025-12-12_171537244.png"
-             alt="Torre A"
+        <img src="Imagenes/imagen_2025-12-12_171537244.png" alt="Torre A"
              onerror="this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Torre+A';">
       </div>
     </article>
 
-    <article class="model-card">
+    <article id="modelB" class="model-card">
       <div class="model-text">
         <h3>Torre B</h3>
         <ul>
@@ -78,86 +95,88 @@
         </ul>
       </div>
       <div class="model-image">
-        <img src="Imagenes/imagen_2025-12-12_170832401.png"
-             alt="Torre B"
+        <img src="Imagenes/imagen_2025-12-12_170832401.png" alt="Torre B"
              onerror="this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Torre+B';">
       </div>
     </article>
   </div>
 </section>
 
-<!-- GALERÍA -->
+<!-- GALLERY: carousel arriba (autoplay) + grid abajo -->
 <section class="section">
   <h2>Galería del Proyecto</h2>
 
-  <div class="gallery">
-    <!-- Usamos exactamente los archivos que tienes -->
+  <!-- gallery carousel (auto play, arrows) -->
+  <div class="gallery-carousel" aria-label="Galería principal">
+    <button class="gc-arrow gc-prev" aria-label="Anterior galería">‹</button>
+    <div class="gc-track">
+      <div class="gc-slide"><img src="Imagenes/Imagen 1.jpeg" alt="Cocina" onerror="this.src='https://placehold.co/1000x700/e9ecef/6c757d/png?text=Imagen';"></div>
+      <div class="gc-slide"><img src="Imagenes/Imagen 3.jpeg" alt="Cocina 2" onerror="this.src='https://placehold.co/1000x700/e9ecef/6c757d/png?text=Imagen';"></div>
+      <div class="gc-slide"><img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor" onerror="this.src='https://placehold.co/1000x700/e9ecef/6c757d/png?text=Imagen';"></div>
+      <div class="gc-slide"><img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor 2" onerror="this.src='https://placehold.co/1000x700/e9ecef/6c757d/png?text=Imagen';"></div>
+      <div class="gc-slide"><img src="Imagenes/foto11.jpg" alt="Fachada" onerror="this.src='https://placehold.co/1000x700/e9ecef/6c757d/png?text=Imagen';"></div>
+    </div>
+    <button class="gc-arrow gc-next" aria-label="Siguiente galería">›</button>
+    <div class="gc-dots" aria-hidden="false"></div>
+  </div>
+
+  <!-- grid gallery (lightbox) -->
+  <div class="gallery" id="grid-gallery">
+    <!-- gallery items (same as before) -->
     <figure class="gallery-item">
-      <img src="Imagenes/foto11.jpg" alt="Fachada" loading="lazy" data-caption="Fachada principal"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Fachada';">
+      <img src="Imagenes/foto11.jpg" alt="Fachada" loading="lazy" data-caption="Fachada principal">
       <figcaption>Fachada principal</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Imagen 1.jpeg" alt="Cocina" loading="lazy" data-caption="Cocina equipada"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Cocina';">
+      <img src="Imagenes/Imagen 1.jpeg" alt="Cocina" loading="lazy" data-caption="Cocina equipada">
       <figcaption>Cocina equipada</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Imagen 3.jpeg" alt="Cocina ángulo" loading="lazy" data-caption="Cocina ángulo"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Cocina2';">
+      <img src="Imagenes/Imagen 3.jpeg" alt="Cocina ángulo" loading="lazy" data-caption="Cocina ángulo">
       <figcaption>Cocina integral</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Foto2.jpg" alt="Vistas" loading="lazy" data-caption="Vistas exteriores"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Vistas';">
+      <img src="Imagenes/Foto2.jpg" alt="Vistas" loading="lazy" data-caption="Vistas exteriores">
       <figcaption>Vistas exteriores</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Foto3.jpg" alt="Patios" loading="lazy" data-caption="Patios interiores"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Patios';">
+      <img src="Imagenes/Foto3.jpg" alt="Patios" loading="lazy" data-caption="Patios interiores">
       <figcaption>Patios interiores</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Foto4.jpg" alt="Arquitectura" loading="lazy" data-caption="Arquitectura moderna"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Arquitectura';">
+      <img src="Imagenes/Foto4.jpg" alt="Arquitectura" loading="lazy" data-caption="Arquitectura moderna">
       <figcaption>Arquitectura moderna</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor" loading="lazy" data-caption="Sala comedor"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Sala';">
+      <img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor" loading="lazy" data-caption="Sala comedor">
       <figcaption>Sala comedor</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor 2" loading="lazy" data-caption="Sala ángulo"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Sala2';">
+      <img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor 2" loading="lazy" data-caption="Sala ángulo">
       <figcaption>Sala comedor ángulo alterno</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/foto7.jpg" alt="Área de servicio" loading="lazy" data-caption="Área de servicio"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Servicio';">
+      <img src="Imagenes/foto7.jpg" alt="Servicio" loading="lazy" data-caption="Área de servicio">
       <figcaption>Área de servicio</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/foto8.jpg" alt="Estacionamiento" loading="lazy" data-caption="Estacionamiento"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Estacionamiento';">
+      <img src="Imagenes/foto8.jpg" alt="Estacionamiento" loading="lazy" data-caption="Estacionamiento">
       <figcaption>2 cajones de estacionamiento</figcaption>
     </figure>
 
     <figure class="gallery-item">
-      <img src="Imagenes/Imagen 2.jpeg" alt="Baño" loading="lazy" data-caption="Baño"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Baño';">
+      <img src="Imagenes/Imagen 2.jpeg" alt="Baño" loading="lazy" data-caption="Baño">
       <figcaption>Baño - Detalle</figcaption>
     </figure>
-
   </div>
 </section>
 
@@ -173,7 +192,7 @@
   © 2025 Departamentos 33.10
 </footer>
 
-<!-- LIGHTBOX / JS -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox hidden" role="dialog" aria-hidden="true">
   <button id="lb-close" class="lb-close" aria-label="Cerrar">✕</button>
   <img id="lb-img" alt="">
