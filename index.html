@@ -1,136 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <title>Departamentos 33.10</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-  <h1>Departamentos 33.10</h1>
+  <h1>DEPARTAMENTOS 33.10</h1>
   <p class="subtitle">33 Oriente #10, Puebla, Pue.</p>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero">
-  <img src="Imagenes/imagen_2025-12-07_200507713.png" alt="Fachada principal">
-</section>
-
-<!-- ================= PRECIO ================= -->
-<section class="price-box">
-  <div class="badge">
-    ÚLTIMA OPORTUNIDAD
-    <span>¡¡Últimos 3 Departamentos Disponibles!!</span>
+  <img
+    src="Imagenes/imagen_2025-12-07_200507713.png"
+    alt="Fachada principal"
+    onerror="this.src='https://placehold.co/1600x900/e9ecef/6c757d/png?text=Imagen+no+disponible';">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h2>ÚLTIMA OPORTUNIDAD</h2>
+      <p class="hero-sub">Últimos 3 departamentos disponibles</p>
+      <div class="price-pill">Desde $2,940,000.00</div>
+    </div>
   </div>
-  <div class="price-pill">Desde $2,940,000.00</div>
 </section>
 
-<!-- ================= UBICACIÓN ================= -->
+<!-- UBICACIÓN -->
 <section class="section">
   <h2>Ubicación</h2>
-
-  <img
-    src="Imagenes/imagen_2025-12-07_202017772.png"
-    class="responsive-img"
-    alt="Mapa de ubicación">
-
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=33+Oriente+10+Puebla+Pue"
-    target="_blank"
-    class="btn blue">
-    📍 Ver en Google Maps
-  </a>
-</section>
-
-<!-- ================= TIEMPOS ================= -->
-<section class="times">
-  <div class="card">
-    <strong>5 min</strong>
-    <span>Medicina BUAP</span>
-  </div>
-  <div class="card">
-    <strong>3 min</strong>
-    <span>Plaza Dorada</span>
-  </div>
-  <div class="card">
-    <strong>10 min</strong>
-    <span>Centro Histórico</span>
+  <div class="card map-card">
+    <img
+      src="Imagenes/imagen_2025-12-07_202017772.png"
+      alt="Mapa ubicación"
+      onerror="this.src='https://placehold.co/700x700/e9ecef/6c757d/png?text=Mapa';">
+    <div class="map-caption">
+      <p>33 Oriente #10, Puebla, Pue.</p>
+      <a class="btn blue" href="https://www.google.com/maps/search/?api=1&query=33+Oriente+10+Puebla+Pue" target="_blank">📍 Ver en Google Maps</a>
+    </div>
   </div>
 </section>
 
-<!-- ================= MODELOS ================= -->
+<!-- MODELOS -->
 <section class="section">
   <h2>Modelos</h2>
 
-  <img
-    src="Imagenes/imagen_2025-12-12_171537244.png"
-    class="responsive-img"
-    alt="Modelo Torre A">
+  <div class="models">
+    <article class="model-card">
+      <div class="model-text">
+        <h3>Torre A</h3>
+        <ul>
+          <li>89 m²</li>
+          <li>2 recámaras</li>
+          <li>2 baños</li>
+          <li>Sala · Comedor · Cocina</li>
+          <li>2 cajones de estacionamiento</li>
+        </ul>
+      </div>
+      <div class="model-image">
+        <img src="Imagenes/imagen_2025-12-12_171537244.png"
+             alt="Torre A"
+             onerror="this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Torre+A';">
+      </div>
+    </article>
 
-  <br><br>
-
-  <img
-    src="Imagenes/imagen_2025-12-12_170832401.png"
-    class="responsive-img"
-    alt="Modelo Torre B">
+    <article class="model-card">
+      <div class="model-text">
+        <h3>Torre B</h3>
+        <ul>
+          <li>96 m²</li>
+          <li>2 recámaras</li>
+          <li>2 baños</li>
+          <li>Sala · Comedor · Cocina</li>
+          <li>Terraza / 3a recámara</li>
+        </ul>
+      </div>
+      <div class="model-image">
+        <img src="Imagenes/imagen_2025-12-12_170832401.png"
+             alt="Torre B"
+             onerror="this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Torre+B';">
+      </div>
+    </article>
+  </div>
 </section>
 
-<!-- ================= GALERÍA ================= -->
+<!-- GALERÍA -->
 <section class="section">
   <h2>Galería del Proyecto</h2>
 
   <div class="gallery">
+    <!-- Usamos exactamente los archivos que tienes -->
+    <figure class="gallery-item">
+      <img src="Imagenes/foto11.jpg" alt="Fachada" loading="lazy" data-caption="Fachada principal"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Fachada';">
+      <figcaption>Fachada principal</figcaption>
+    </figure>
 
-    <!-- Fachada -->
-    <img src="Imagenes/foto11.jpg" alt="Fachada principal">
+    <figure class="gallery-item">
+      <img src="Imagenes/Imagen 1.jpeg" alt="Cocina" loading="lazy" data-caption="Cocina equipada"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Cocina';">
+      <figcaption>Cocina equipada</figcaption>
+    </figure>
 
-    <!-- Cocina -->
-    <img src="Imagenes/Imagen 1.jpeg" alt="Cocina equipada">
-    <img src="Imagenes/Imagen 3.jpeg" alt="Cocina integral">
+    <figure class="gallery-item">
+      <img src="Imagenes/Imagen 3.jpeg" alt="Cocina ángulo" loading="lazy" data-caption="Cocina ángulo"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Cocina2';">
+      <figcaption>Cocina integral</figcaption>
+    </figure>
 
-    <!-- Arquitectura -->
-    <img src="Imagenes/Foto2.jpg" alt="Vistas exteriores">
-    <img src="Imagenes/Foto3.jpg" alt="Patios interiores">
-    <img src="Imagenes/Foto4.jpg" alt="Arquitectura moderna">
+    <figure class="gallery-item">
+      <img src="Imagenes/Foto2.jpg" alt="Vistas" loading="lazy" data-caption="Vistas exteriores"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Vistas';">
+      <figcaption>Vistas exteriores</figcaption>
+    </figure>
 
-    <!-- Sala / comedor -->
-    <img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor">
-    <img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor ángulo alterno">
+    <figure class="gallery-item">
+      <img src="Imagenes/Foto3.jpg" alt="Patios" loading="lazy" data-caption="Patios interiores"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Patios';">
+      <figcaption>Patios interiores</figcaption>
+    </figure>
 
-    <!-- Servicios -->
-    <img src="Imagenes/foto7.jpg" alt="Área de servicio">
-    <img src="Imagenes/foto8.jpg" alt="Estacionamiento">
+    <figure class="gallery-item">
+      <img src="Imagenes/Foto4.jpg" alt="Arquitectura" loading="lazy" data-caption="Arquitectura moderna"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Arquitectura';">
+      <figcaption>Arquitectura moderna</figcaption>
+    </figure>
 
-    <!-- Baño -->
-    <img src="Imagenes/Imagen 2.jpeg" alt="Baño completo">
+    <figure class="gallery-item">
+      <img src="Imagenes/Imagen 4.jpeg" alt="Sala comedor" loading="lazy" data-caption="Sala comedor"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Sala';">
+      <figcaption>Sala comedor</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="Imagenes/Imagen 5.jpeg" alt="Sala comedor 2" loading="lazy" data-caption="Sala ángulo"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Sala2';">
+      <figcaption>Sala comedor ángulo alterno</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="Imagenes/foto7.jpg" alt="Área de servicio" loading="lazy" data-caption="Área de servicio"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Servicio';">
+      <figcaption>Área de servicio</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="Imagenes/foto8.jpg" alt="Estacionamiento" loading="lazy" data-caption="Estacionamiento"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Estacionamiento';">
+      <figcaption>2 cajones de estacionamiento</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="Imagenes/Imagen 2.jpeg" alt="Baño" loading="lazy" data-caption="Baño"
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/6c757d/png?text=Baño';">
+      <figcaption>Baño - Detalle</figcaption>
+    </figure>
 
   </div>
 </section>
 
-<!-- ================= CONTACTO ================= -->
+<!-- CONTACTO -->
 <section class="contact">
   <h2>¿Te interesa?</h2>
-
-  <a
-    href="https://wa.me/522221256530?text=Hola,%20me%20interesa%20información%20de%20Deptos%2033.10"
-    target="_blank"
-    class="btn whatsapp">
+  <a class="btn whatsapp" href="https://wa.me/522221256530?text=Hola,%20me%20interesa%20informacion%20de%20Deptos%2033.10" target="_blank">
     📲 Contactar por WhatsApp
   </a>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   © 2025 Departamentos 33.10
 </footer>
 
-<!-- ================= JS ================= -->
-<script src="script.js"></script>
+<!-- LIGHTBOX / JS -->
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-hidden="true">
+  <button id="lb-close" class="lb-close" aria-label="Cerrar">✕</button>
+  <img id="lb-img" alt="">
+  <div id="lb-caption" class="lb-caption"></div>
+  <button id="lb-prev" class="lb-arrow lb-prev" aria-label="Anterior">‹</button>
+  <button id="lb-next" class="lb-arrow lb-next" aria-label="Siguiente">›</button>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
