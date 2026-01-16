@@ -1,27 +1,22 @@
-// FADE-IN DE IMÁGENES AL HACER SCROLL
-const galleryImages = document.querySelectorAll(".gallery img");
+// ====== FORZAR ANIMACIÓN GALERÍA ======
+window.addEventListener("load", () => {
+  const imgs = document.querySelectorAll(".gallery img");
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+  imgs.forEach((img, i) => {
+    setTimeout(() => {
+      img.classList.add("show");
+    }, i * 120);
+  });
+});
 
-galleryImages.forEach(img => observer.observe(img));
+// ====== HERO FADE SUAVE ======
+const heroImg = document.querySelector(".hero img");
 
-// HERO SLIDER (si después agregas más imágenes)
-let heroIndex = 0;
-const heroImages = document.querySelectorAll(".hero img");
+if (heroImg) {
+  heroImg.style.opacity = "0";
+  heroImg.style.transition = "opacity 1.5s ease";
 
-if (heroImages.length > 1) {
-  setInterval(() => {
-    heroImages.forEach(img => img.style.display = "none");
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    heroImages[heroIndex].style.display = "block";
-  }, 5000);
+  window.addEventListener("load", () => {
+    heroImg.style.opacity = "1";
+  });
 }
